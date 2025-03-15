@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+body{
+    background-color: var(--light-pink);
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+button:hover{
+    color: purple;
+}
+
+.container{
+    background-color: var(--white);
+    max-width: 700px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.faq-headline{
+    display: flex;
+    gap: 2 rem;
+}
+
+.faq-headline h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.accordion-container .accordion-item:not(:last-child){
+    border-bottom: 2px solid var(--light-pink);
+}
+
+.accordion-item .icons img{
+    min-width: 30px;
+}
+
+.accordion-item .icons .minus-icon{
+    display: none;
+}
+
+.accordin-description{
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+
+.accordin-description p{
+    color: var(--grayish-purple);
+    padding: 1.5rem 0;
+}
+
+
+@media (max-width: 540px) {
+    body {
+        background-image: url('../assets/images/background-pattern-mobile.svg');
+    }
+
+    .container {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
